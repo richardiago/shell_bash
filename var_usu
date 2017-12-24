@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Criando minhas próprias variaveis
+
+idade=25
+nome="Monica"
+
+echo "A $nome tem $idade anos de idade"
+
+#redirecionando comandos à variaveis
+
+dia=`date`
+echo "A data é $dia"
