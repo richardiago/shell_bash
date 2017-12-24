@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#copiar a listagem de um diretório para arquivos únicos e acordo com data e hora
+
+arq=`date +%d%m%y%H%M`
+ls -la /home/iago/Documentos > log.$arq
+
+
+
