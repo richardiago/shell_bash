@@ -1,0 +1,4 @@
+#!/bin/bash
+
+var=`echo "scale=2; 5/3" | bc`
+echo "Resultado: $var"
