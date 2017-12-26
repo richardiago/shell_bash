@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if ls /home/iago/teste
+then
+	echo "Diretório raiz encontrado!"
+else 
+	echo "Diretório não encontrado :("
+fi
+
+
