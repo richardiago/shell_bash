@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+nome='Iago'
+idade=35
+
+echo "o nome dele é $nome"
+echo "status de saida atual: $?"
+
+echo "E tem idade de $idade anos"
+exit 36
+
