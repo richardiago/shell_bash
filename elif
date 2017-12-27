@@ -1,0 +1,18 @@
+#!/bin/bash
+
+idade=25
+
+if idade==22
+then
+	echo "Idade igual a 20!"
+	
+elif idade==22
+then
+	echo "Idade igual a 22!"
+	
+elif idade==25
+then
+	echo "Idade igual a 25"
+fi
+
+
