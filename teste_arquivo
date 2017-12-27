@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#comandos para verificar existencia de arquivos
+
+if [ -N var_amb ]
+then 
+	echo "verdadeiro !!!"
+else
+	echo "falso !!!"
+fi
