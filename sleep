@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#comando sleep faz o script "dormir" por um determinado número de segundos
+
+#1ª ação
+echo "Meu nome é Iago..."
+
+#Dorme por 10 segundos
+sleep 10
+
+#2ª ação
+echo "... tenho 21 anos..."
+
+#Dorme por 5 segundos
+sleep 5
+
+#3ª ação
+echo "... e é isso !..."
+
+#Dorme por 5 segundos
+sleep 5
+
+#4ª ação
+echo "..Tchau !!!"
