@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#comparações númericas
+v1=115
+v2=116
+
+if [ $v1 -gt $v2 ]
+then
+	echo "$v1 é igual que $v2"
+fi
+
+#comparações de string
+t1="Maria"
+t2="João"
+
+if [ $t1 = $t2 ]
+then
+	echo "São iguais"
+else
+	echo "São diferentes"
+fi
