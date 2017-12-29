@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#comando case
+
+nome="Joana"
+
+case $nome in
+	"João")
+		echo "É João";;
+	"Maria")
+		echo "É Maria";;
+	"José")
+		echo "É josé";;
+	"Carlos" | "Iago")
+		echo "É Carlos ou Iago";;
+	*)
+		echo "Não é ninguém";;
+esac
+	
