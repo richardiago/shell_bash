@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#laço for
+
+for valor in pizza esfiha "pão de queijo"
+do
+	echo "Adoro $valor"
+done
