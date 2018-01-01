@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Ler dados do usuário pelo teclado, parâmentos pela linha de comando
+
+echo "Parametros fornecidos: $#"
+
+if [ $# -lt 2 ]
+then
+	echo "Você não digitou a quantidade minima de parâmetros."
+	
+else
+	echo "nome do script: $0"
+	echo "Seu nome: $1"
+
+	echo "Calcular o quadrado de um número"
+	quadrado=$[ $2 * $2 ]
+
+	echo "$1, o quadrado de $2 é $quadrado."
+fi
+
+
+
+ 
+
+
