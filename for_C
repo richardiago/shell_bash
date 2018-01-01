@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Estrutura de repetição FOR no estilo da linguagem C
+#Usa-se dois pares de parênteses, sempre com espaços
+
+
+for (( i = 1; i<= 15; i++ ))
+do
+	echo "Número : $i"
+done
+
+
