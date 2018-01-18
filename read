@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#comando read
+
+
+read -p "Digite seu nome: " nome
+
+echo "Seu nome é $nome"
+
+
