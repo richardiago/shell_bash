@@ -1,0 +1,70 @@
+#!/bin/bash
+
+#Script básico para teste de caixas de dialogos sequenciais, onde o conteudo de uma caixa de dialogo depende do que foi selecionado na caixa anterior.
+
+#senha padrão
+key="abc123"
+
+function dmenu() {
+
+	cidade=$(whiptail --title "Listagem de Cidades" --checklist --fb \
+	"Qual cidade deseja visitar?" 15 60 5 \
+	"Londres" "Inglaterra" ON \
+	"Berlim" "Alemanha" OFF \
+	"Toronto" "Canadá" OFF \
+	"Abu Dhabi" "Emirados Árabes" OFF \
+	"Pequim" "China" OFF 3>&1 1>&2 2>&3)
+
+	status=$?
+	if [ $status = 0 ]
+	then
+		echo "A cidades escolhidas foram: "$cidade
+	else
+		echo "Você não escolheu nenhuma cidade."
+	fi
+}
+
+
+function dsenha() {
+	senha=$(whiptail --title "Senha" --passwordbox "Digite a senha de uso secreto:" --fb 10 60 3>&1 1>&2 2>&3)
+	status=$?
+	
+	if [ $status = 0 ] && [ $senha = $1 ]
+	then
+		dmenu
+		
+	elif [ $status = 0 ] && [ $senha != $1 ]
+	then
+		echo "Senha incorreta, saia daqui !!!"
+		
+	else
+		dsimnao
+	fi
+}
+
+function dsimnao() {
+
+	if whiptail --title "Sair" --yes-button "Sair" --no-button "Não sair" --yesno "Deseja realmente sair?" --fb 10 60
+	then
+		exit 0
+	else 
+		dnome
+	fi
+}
+
+function dnome() {
+
+	nome=$(whiptail --title "Seja bem-vindo(a)" --inputbox "Digite seu nome:" --fb 10 60 3>&1 1>&2 2>&3)
+	status=$?
+	
+	if [ $status = 0 ]
+	then
+		dsenha "$key"
+	else
+		dsimnao
+	fi
+	
+}
+
+dnome
+
