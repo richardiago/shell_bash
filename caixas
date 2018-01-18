@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#Caixas de dialogo
+
+#Message box
+whiptail --title "Caixa de mensagem" --msgbox "Esta é uma caixa que exibe uma mensagem. Escolha OK." --fb 10 50
+
+#Caixa sim ou não
+if whiptail --title "Teste caixa sim/não" --yesno "Escolha sim ou não." 10 50
+then
+	echo "Você escolheu Sim. O status de saída é $?."
+else
+	echo "Você escolheu Não. O status de saída é $?."
+fi
+
+#Brincando com o tamanho da caixa
+
+for (( i=0; i<=70; i+=10 ));
+do
+	whiptail --title "Caixa teste" --msgbox "Testando o tamanho da caixa. A largura atual é $i. Pesione enter para prosseguir." 20 $i
+done
+
+#Exibindo o conteúdo de um arquivo dentro de uma caixa do tipo textbox, com rolagem de tela (scroll)
+
+#whiptail --title "Caixa textbox" --textbox /home/iago/Downloads/inscrição #20 65 --scrolltext
+
+# Personalizando o texto dos botões da caixa Yes / No. Para isso usaremos as opções -yes-button" e "--no-button"
+
+if whiptail --title "Escolhendo o tipo de instalação" --yes-button "Completa" --no-button "Personalizada" --yesno "Escolha o tipo de instalação desejada" --fb 10 50
+then
+	echo "Você escolheu a instalação completa."
+else 
+	echo "Você escolheu a instalação personalizada."
+fi
+
+
+
