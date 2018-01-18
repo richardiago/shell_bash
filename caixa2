@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#Caixa com entrada de texto do usuario
+
+nome=$(whiptail --title "Entrada de nome do usuário" --inputbox "Digite seu nome:" --fb 10 60 3>&1 1>&2 2>&3)
+status=$?
+if [ $status = 0 ]
+then
+	echo "O nome digitado foi: $nome"
+else
+	echo "Entrada cancelada pelo usuário."
+fi
+
+#Caixa de senhas
+senha=$(whiptail --title "Caixa de senha" --passwordbox "Digite sua senha e escolha OK para continuar." --fb 10 50 3>&1 1>&2 2>&3)
+status=$?
+if [ $status = 0 ] 
+then
+	echo "A senha digitada foi: $senha"
+else
+	echo "Entrada cancelada."
+fi
+
+#Caixa de menu
+
+item=$(whiptail --title "Abrindo aplicativos" --menu "Escolha uma opção na lista abaixo:" --fb 15 50 4 \
+"1" "Calculadora" \
+"2" "Efetuar Backup" \
+"3" "Navegar na internet" \
+"4" "Enviar email" 3>&1 1>&2 2>&3)
+
+status=$?
+if [ $status = 0 ]
+then
+	echo "Você escolheu a opção:" $item
+else
+	echo "Opção cancelada."
+fi
